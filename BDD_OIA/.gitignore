@@ -1,0 +1,9 @@
+/models
+/output
+Dockerfile
+__pycache__
+/out
+/notebooks/40-epochs.csv
+/data
+/logs
+/wandb

@@ -1,0 +1,2 @@
+Make use of python server.py to run experiments.
+Install environment with pip install -r requirements.txt

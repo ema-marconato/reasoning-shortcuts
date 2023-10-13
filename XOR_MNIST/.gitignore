@@ -1,0 +1,8 @@
+/data
+/notebooks
+/wandb
+__pycache__
+datasets/utils/2mnist_10digits
+run_slurm.sh
+/logs
+datasets/__pycache__
