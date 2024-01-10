@@ -30,7 +30,9 @@ $pip install -r requirements.txt
 
 BDD-OIA is a dataset of dashcams images for autonomous driving predictions, annotated with input-level objects (like bounding boxes of pedestrians, etc.) and concept-level entities (like "road is clear"). The original dataset can be found here: https://twizwei.github.io/bddoia_project/
 
-I preprocessed the dataset with a pretrained Faster-RCNN on BDD-100k and with the first module in CBM-AUC (Sawada and Nakamura, IEEE (2022)), leading to embeddings of dimension 2048. These are reported in the zip ```bdd_2048.zip```. The original repo of CBM-AUC can be found here https://github.com/AISIN-TRC/CBM-AUC.
+I preprocessed the dataset with a pretrained Faster-RCNN on BDD-100k and with the first module in CBM-AUC (Sawada and Nakamura, IEEE (2022)), leading to embeddings of dimension 2048. These are reported in the zip ```bdd-preprocessed-2048.zip```. Extract the files in ``BDD-OIA/data`` and be sure to put all the files in a folder named ``/bdd2048``.
+
+The original repo of CBM-AUC can be found here https://github.com/AISIN-TRC/CBM-AUC.
 
 
 For usage, consider citing the original dataset creators and Sawada and Nakamura:
