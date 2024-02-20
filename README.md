@@ -2,18 +2,47 @@
 
 Codebase for the paper: 
 
-Not All Neuro-Symbolic Concepts Are Created Equal: Analysis and Mitigation of Reasoning Shortcuts, E. Marconato, S. Teso, A. Vergari, A. Passerini - NeurIPS (2023)
+Not All Neuro-Symbolic Concepts Are Created Equal: Analysis and Mitigation of Reasoning Shortcuts; E. Marconato, S. Teso, A. Vergari, A. Passerini - NeurIPS (2023)
 
 ```
-@misc{marconato2023neurosymbolic,
-      title={Not All Neuro-Symbolic Concepts Are Created Equal: Analysis and Mitigation of Reasoning Shortcuts}, 
-      author={Emanuele Marconato and Stefano Teso and Antonio Vergari and Andrea Passerini},
-      year={2023},
-      eprint={2305.19951},
+@article{marconato2024not,
+  title={Not all neuro-symbolic concepts are created equal: Analysis and mitigation of reasoning shortcuts},
+  author={Marconato, Emanuele and Teso, Stefano and Vergari, Antonio and Passerini, Andrea},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+```
+## RELATED PAPERS
+
+Reasoning Shortcuts in Neuro-Symbolic Continual Learning:
+
+Neuro-Symbolic Continual Learning: Knowledge, Reasoning Shortcuts and Concept Rehearsal; E. Marconato, G. Bontempo, E. Ficarra, S. Calderara, A. Passerini, S. Teso - ICML (2023)
+
+```
+@InProceedings{marconato2023neuro,
+  title={{Neuro Symbolic Continual Learning: Knowledge, Reasoning Shortcuts and Concept Rehearsal}}, 
+  author={Emanuele Marconato and Gianpaolo Bontempo and Elisa Ficarra and Simone Calderara and Andrea Passerini and Stefano Teso},
+  year={2023},
+booktitle = {Proceedings of the 40th International Conference on Machine Learning~(ICML)}}
+```
+
+
+Follow-up paper for detection and uncertainty on concepts:
+
+BEARS Make Neuros-Symbolic Models Reasoning Shortcuts Aware; E. Marconato, S. Bortolotti, E. van Krieken, A. Vergari, A. Passerini, S. Teso - arxiv (2024)
+
+```
+@misc{marconato2024bears,
+      title={BEARS Make Neuro-Symbolic Models Aware of their Reasoning Shortcuts}, 
+      author={Emanuele Marconato and Samuele Bortolotti and Emile van Krieken and Antonio Vergari and Andrea Passerini and Stefano Teso},
+      year={2024},
+      eprint={2402.12240},
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
 ```
+
 
 ## Installation and use
 
