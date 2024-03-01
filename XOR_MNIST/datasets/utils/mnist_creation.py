@@ -141,14 +141,14 @@ def create_dataset(n_digit=2, sequence_len=2, samples_x_world=100, train=True, d
     label2idx = {c: set() for c in worlds}
     for k, v in tqdm(label2idx.items()):
         for i, label in enumerate(labels):
-            if tuple(label[:2]) == k:
+            if tuple(label[:sequence_len]) == k:
                 v.add(i)
     label2idx = {k: torch.tensor(list(v)) for k, v in label2idx.items()}
 
     return np.array(imgs).astype('int32'), np.array(labels), label2idx
 
 
-def check_dataset(n_digits, data_folder, data_file, dataset_dim):
+def check_dataset(n_digits, data_folder, data_file, dataset_dim, sequence_len=2):
     """Checks whether the dataset exists, if not creates it."""
     Path(data_folder).mkdir(parents=True, exist_ok=True)
     data_path = os.path.join(data_folder, data_file)
@@ -157,18 +157,18 @@ def check_dataset(n_digits, data_folder, data_file, dataset_dim):
     except:
         print("No dataset found.")
         # Define dataset dimension so to have teh same number of worlds
-        n_worlds = n_digits * n_digits
+        n_worlds = n_digits ** sequence_len
         samples_x_world = {k: int(d / n_worlds) for k, d in dataset_dim.items()}
         dataset_dim = {k: s * n_worlds for k, s in samples_x_world.items()}
 
-        train_imgs, train_labels, train_indexes = create_dataset(n_digit=n_digits, sequence_len=2,
+        train_imgs, train_labels, train_indexes = create_dataset(n_digit=n_digits, sequence_len=sequence_len,
                                                                  samples_x_world=samples_x_world['train'], train=True,
                                                                  download=True)
 
-        val_imgs, val_labels, val_indexes = create_dataset(n_digit=n_digits, sequence_len=2,
+        val_imgs, val_labels, val_indexes = create_dataset(n_digit=n_digits, sequence_len=sequence_len,
                                                            samples_x_world=samples_x_world['val'], train=True,
                                                            download=True)
-        test_imgs, test_labels, test_indexes = create_dataset(n_digit=n_digits, sequence_len=2,
+        test_imgs, test_labels, test_indexes = create_dataset(n_digit=n_digits, sequence_len=sequence_len,
                                                               samples_x_world=samples_x_world['test'], train=False,
                                                               download=True)
 
